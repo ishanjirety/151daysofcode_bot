@@ -1,0 +1,14 @@
+npm i twit --save // Package Twit for NodeJs to 
+                     perform functions with twitter
+
+initialise object by adding `new` keyword
+add configurations like:
+                        consumer_key
+                        consumer_secret
+                        acces_token
+                        acces_token_secret
+
+
+twit Methods -> get()    [search]
+             -> post()   [post tweets]
+             -> stream() [Persistant Connection,assigning events]
