@@ -39,8 +39,7 @@ function StreamData(){
 }
 
 // @desc this function takes id as parameter and retweets it
-function Retweet(ids,tweet){
-        console.log(tweet.user.id)
+function Retweet(ids){
         setTimeout(()=>{
             Twit_config.post('statuses/retweet/:id', { id: ids }, function (err, data, response) {
                 if(err){
@@ -65,40 +64,40 @@ function Retweet(ids,tweet){
 
 // <================== To get accumulated tweets for future ====================>
 
-// @desc Initialising tweet parameters
-const PARAMETERS = {
-    q:"#151daysofcode",
-    count:100
-}
+// // @desc Initialising tweet parameters
+// const PARAMETERS = {
+//     q:"#151daysofcode",
+//     count:100
+// }
 
-// @desc making a GET request to twitter to get tweets
-// @desc 'search/tweets' end points
+// // @desc making a GET request to twitter to get tweets
+// // @desc 'search/tweets' end points
 
-// SearchTweet()
-const SearchTweet_Interval = setInterval(SearchTweet,600000)
-function SearchTweet(){
-Twit_config.get('search/tweets',PARAMETERS,gotData)
-}
+// // SearchTweet()
+// const SearchTweet_Interval = setInterval(SearchTweet,600000)
+// function SearchTweet(){
+// Twit_config.get('search/tweets',PARAMETERS,gotData)
+// }
 
 
-// @desc To handle errors, Data & Responses 
-function gotData(err,data,response){
-    if(err){
-        console.log(err)
-        return
-    }
+// // @desc To handle errors, Data & Responses 
+// function gotData(err,data,response){
+//     if(err){
+//         console.log(err)
+//         return
+//     }
     
-    // @desc Extracting tweets from response
-    const Recordedtweets = data.statuses
-    // @desc creating empty array to store tweet IDs for retweet
-    let TweetIDs = []
-    console.log(data.statuses)
-    // @desc Mapping through Recorded Tweets
-    Recordedtweets.map((tweets,key)=>{
-        TweetIDs.push(tweets.id_str)
-    })
-    Retweet(TweetIDs)
-}
+//     // @desc Extracting tweets from response
+//     const Recordedtweets = data.statuses
+//     // @desc creating empty array to store tweet IDs for retweet
+//     let TweetIDs = []
+//     console.log(data.statuses)
+//     // @desc Mapping through Recorded Tweets
+//     Recordedtweets.map((tweets,key)=>{
+//         TweetIDs.push(tweets.id_str)
+//     })
+//     Retweet(TweetIDs)
+// }
 
 // <================== End Of Feature ====================>
 
