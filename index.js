@@ -2,7 +2,10 @@
 const TWIT = require('twit');
 
 // For server engagement
-const http = require('http')
+const express=require('express');
+
+const app=express()
+
 // @desc Importing dotenv to get API tokens from .env
 const dotenv = require('dotenv')
 
@@ -100,15 +103,10 @@ function gotData(err,data,response){
 // <================== End Of Feature ====================>
 
 
-
-const requestListener = function (req, res) {
-    res.writeHead(200);
-    res.end("My first server!");
-};
-const server = http.createServer(requestListener);
-server.listen(3000, () => {
-    console.log(`Server is running on 3000`);
-});
-
 // Function Call
 StreamData()
+
+const port = process.env.PORT || 3000;
+app.listen(port, ()=>{
+  console.log(`Listening On port ${port}`);
+})
