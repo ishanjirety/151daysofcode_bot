@@ -1,5 +1,6 @@
 // @desc Importing Library for Twitter
 const TWIT = require('twit');
+const wakeUpDyno = require("./Dyno_Ping.js");
 
 // For server engagement
 const express=require('express');
@@ -14,6 +15,9 @@ dotenv.config()
 
 // @desc Destructuring and extracting variables from ENV
 const {CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,ACCESS_TOKEN_SECRET} = process.env
+
+// @desc Dyno link Declaration Heroku
+const Dyno_Link="https://bot-151daysofcode.herokuapp.com/"
 
 
 // @desc Authenticating OAuth
@@ -108,4 +112,5 @@ StreamData()
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
   console.log(`Listening On port ${port}`);
+  wakeUpDyno(Dyno_Link);
 })
