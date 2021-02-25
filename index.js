@@ -15,6 +15,7 @@ dotenv.config()
 
 // @desc Destructuring and extracting variables from ENV
 const {CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,ACCESS_TOKEN_SECRET} = process.env
+console.log(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,ACCESS_TOKEN_SECRET)
 
 // @desc Dyno link Declaration Heroku
 const Dyno_Link="https://bot-151daysofcode.herokuapp.com/"
