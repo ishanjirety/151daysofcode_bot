@@ -26,7 +26,6 @@ const wakeUpDyno = (url, interval = 25, callback) => {
             }
             
         }
-
     }, milliseconds);
 };
 

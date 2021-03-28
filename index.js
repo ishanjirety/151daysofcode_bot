@@ -37,7 +37,8 @@ function StreamData(){
     stream.on('tweet', function (tweet) {
         // Detecting Tweet 
         console.log(`> New Tweet Detected : ${tweet.id_str}`)
-        // Passing unique id to retweet
+        // Passing unique id to 
+        console.log(tweet);
        Retweet(tweet.id_str,tweet)
       })
 }
@@ -68,14 +69,14 @@ function Retweet(ids){
 
 // <================== To get accumulated tweets for future ====================>
 
-// // @desc Initialising tweet parameters
+// // // @desc Initialising tweet parameters
 // const PARAMETERS = {
 //     q:"#151daysofcode",
-//     count:100
+//     count:2
 // }
 
-// // @desc making a GET request to twitter to get tweets
-// // @desc 'search/tweets' end points
+// // // @desc making a GET request to twitter to get tweets
+// // // @desc 'search/tweets' end points
 
 // // SearchTweet()
 // const SearchTweet_Interval = setInterval(SearchTweet,600000)
@@ -84,7 +85,7 @@ function Retweet(ids){
 // }
 
 
-// // @desc To handle errors, Data & Responses 
+// // // @desc To handle errors, Data & Responses 
 // function gotData(err,data,response){
 //     if(err){
 //         console.log(err)
@@ -100,7 +101,7 @@ function Retweet(ids){
 //     Recordedtweets.map((tweets,key)=>{
 //         TweetIDs.push(tweets.id_str)
 //     })
-//     Retweet(TweetIDs)
+//     // Retweet(TweetIDs)
 // }
 
 // <================== End Of Feature ====================>
