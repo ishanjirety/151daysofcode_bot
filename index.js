@@ -38,7 +38,6 @@ function StreamData(){
         // Detecting Tweet 
         console.log(`> New Tweet Detected : ${tweet.id_str}`)
         // Passing unique id to 
-        console.log(tweet);
        Retweet(tweet.id_str,tweet)
       })
 }
