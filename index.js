@@ -17,7 +17,7 @@ dotenv.config()
 const {CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN,ACCESS_TOKEN_SECRET} = process.env
 
 // @desc Dyno link Declaration Heroku
-const Dyno_Link="https://bot151daysofcode.herokuapp.com/"
+const Dyno_Link="https://bot-151daysofcode.herokuapp.com/"
 
 
 // @desc Authenticating OAuth
