@@ -38,7 +38,6 @@ function StreamData() {
         // Detecting Tweet 
         console.log(`> New Tweet Detected : ${tweet.id_str}`)
         // Passing unique id to 
-        console.log(tweet);
         Retweet(tweet.id_str, tweet)
     })
 }
@@ -72,5 +71,5 @@ StreamData()
 const port = process.env.PORT || 3000 || 5500 || 4444 || 3333;
 app.listen(port, () => {
     console.log(`Listening On port ${port}`);
-    wakeUpDyno(Dyno_Link);
+    // wakeUpDyno(Dyno_Link);
 })
