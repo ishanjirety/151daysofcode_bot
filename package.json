@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker-compose up --no-start --build 151daysofcode-prod",
+    "run": "docker-compose up -d 151daysofcode-prod"
   },
   "author": "Ishan_Jirety",
   "license": "ISC",

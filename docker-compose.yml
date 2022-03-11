@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  151daysofcode-prod:
+    container_name: 151daysofcode-prod
+    env_file: .env
+    image: 151daysofcode:latest
+    volumes:
+      - ./logs:/app/logs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run start
