@@ -7,6 +7,5 @@ admin.initializeApp({
 
 
 const dbFirebase = admin.firestore();
-const dbRealtimeDatabase = admin.database();
 
-module.exports = { dbFirebase, dbRealtimeDatabase }
+module.exports = { dbFirebase }
